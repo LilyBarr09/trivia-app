@@ -67,7 +67,7 @@ function App() {
     if (nextQuestion < triviaQuestions.length) {
       setCurrentQuestion(nextQuestion);
     } else {
-      setShowScore(true);
+      setShowScore(true); //set to true because all questions have been answered, so total score can be displayed
     }
   };
 
