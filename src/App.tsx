@@ -61,9 +61,9 @@ function App() {
 
   const handleAnswerOptionClick = (isCorrect: boolean) => {
     if (isCorrect) {
-      setScore(score + 1);
+      setScore(score + 1); //score starts at zero, if it is true add one
     }
-    const nextQuestion = currentQuestion + 1;
+    const nextQuestion = currentQuestion + 1; //currentQuestion starts at position zero on the array - add one to 'move' to next question
     if (nextQuestion < triviaQuestions.length) {
       setCurrentQuestion(nextQuestion);
     } else {
@@ -73,6 +73,7 @@ function App() {
 
   return (
     <div className="app">
+      {/* ternary operator: condition ? trueExpression : falseExpression  */}
       {showScore ? (
         <div className="score-section">
           You scored {score} out of {triviaQuestions.length}
