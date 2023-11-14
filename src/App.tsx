@@ -55,9 +55,9 @@ function App() {
     },
   ];
 
-  const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [showScore, setShowScore] = useState(false);
-  const [score, setScore] = useState(0);
+  const [currentQuestion, setCurrentQuestion] = useState(0); //zero because it is beginning at the first index of the array
+  const [showScore, setShowScore] = useState(false); // false because we don't want it to show unless the game is over - gone through all the questions
+  const [score, setScore] = useState(0); // zero because we begin with zero to start counting
 
   const handleAnswerOptionClick = (isCorrect: boolean) => {
     if (isCorrect) {
